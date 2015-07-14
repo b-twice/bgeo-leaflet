@@ -13,6 +13,7 @@ var gGeology = svg.append('g').attr("class", "leaflet-zoom-hide");
 var gBoundary= svg.append('g').attr('class', 'leaflet-zoom-hide');
 
 // color scale for geologic features
+// Deprecated
 var colorScale = d3.scale.category20c();
 
 // Borrowed heavily from Mike Bostock's Leaflet and D3 guide, http://bost.ocks.org/mike/leaflet/
@@ -33,8 +34,9 @@ d3.json("data/henrico_geology.topo.json", function(collection) {
         .data(geologyTopo.features)
         .enter()
             .append("path")
-            .attr('class', 'entity')
-            .style("fill", function (d) {return colorScale(getRandomInt(0, 10)) });
+            .attr('class', function(d) {return 'entity ' + d.properties.ROCKTYPE1});
+            // Random fill of colors
+            //.style("fill", function () {return colorScale(getRandomInt(0, 10)) });
 
     map.on("viewreset", reset);
     reset();

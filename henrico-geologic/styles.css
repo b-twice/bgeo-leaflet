@@ -17,3 +17,32 @@ svg {
     stroke: #000;
     stroke-width:1px;
 }
+
+/*Data Styles*/
+.alluvium {
+    fill:#ff7f0e;
+}
+.breccia {
+    fill:#9467bd;
+}
+.granite {
+    fill:#7f7f7f;
+}
+.gravel {
+    fill:#c7c7c7;
+}
+.mylonite {
+    fill:#8c564b;
+}
+.sand {
+    fill:#dbdb8d;
+}
+.sandstone {
+    fill:#bcbd22;
+}
+.terrace {
+    fill:#98df8a;
+}
+.water {
+    fill:#1f77b4;
+}
